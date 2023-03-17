@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right {
+    float: right;
+}
+
+.padding-150 {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+header {
+    /* background: #333; */
+    background: #005D9C;
+    /* background: #F15A29; */
+    /* background: #6BAA3D; */
+    /* background: #EFEFEF; */
+    /* background: #FFC72C; */
+    height: 230px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0 10px;
+    background: #fff;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+header ul li a {
+    padding: 5px;
+}
+
+header form {
+    margin: 40px 0 0 0;
+}
+
+header form input[type=text] {
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+header form input[type=submit] {
+    height: 40px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    margin: 0 5px;
+    width: 100px;
+    cursor: pointer;
+    background: #6BAA3D;
+    color: white;
+    font-weight: 600;
+}
+
+header h2 {
+    margin: 20px 0 0 0;
+    font-size: 30px;
+}
+
+header h2, h4 {
+    color: #fff;
+}
+
+a.logo {
+    color: #fff;
+    font-size: 25px;
+}
+
+/* Corpo home */
+
+.container-hotel {
+    background: url("../../../libs/images/imagem-hotel1.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    height: 150px;
+    width: 33%;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+}
+
+.container-hotel .info {
+    color: #EFEFEF ;
+    opacity: 1;
+}
+
+.container-hotel .info p {
+    margin: 10px 0;
+}
+
+.see-more {
+    background: #EFEFEF;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.avaliados {
+    display: flex;
+}
+
+.offers {
+    margin: 50px 0 0 0;
+}
+
+.page-offers {
+    display: flex;
+}
+
+.offers .info {
+    /* color: #fff; */
+    background: url("../../../libs/images/ilhas-maldivas.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 10px;
+    height: 130px;
+    width: 50%;
+    margin: 10px 10px 0 0;
+}
+
+.offers .info a {
+    background: #005D9C;
+    color: #fff;
+    padding: 10px;
+    float: right;
+    border-radius: 8px;
+    margin: -10px 0;
+}

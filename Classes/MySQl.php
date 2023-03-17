@@ -4,7 +4,7 @@
         private $conn;
 
         public static function Connect() {
-            $file_json = file_get_contents("infoSample.json");
+            $file_json = file_get_contents("info.json");
             $content_json = json_decode($file_json,false);
         
 
