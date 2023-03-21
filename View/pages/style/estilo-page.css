@@ -88,6 +88,8 @@ a.logo {
 
 /* Corpo home */
 
+h2,h3 {color: #F15A29;}
+
 .container-hotel {
     background: url("../../../libs/images/imagem-hotel1.jpeg");
     background-position: center;
@@ -108,17 +110,27 @@ a.logo {
     margin: 10px 0;
 }
 
+.container-hotel .info a {
+    background: #005D9C;
+    color: #fff;
+    padding: 5px;
+    float: right;
+    border-radius: 5px;
+    position: relative;
+}
+
 .see-more {
     background: #EFEFEF;
     width: 50px;
     height: 50px;
     text-align: center;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 88%;
     padding: 12px;
     cursor: pointer;
+    margin: 0;
+    position: absolute;
+    right: 130px;
+
 }
 
 .avaliados {
@@ -127,6 +139,10 @@ a.logo {
 
 .offers {
     margin: 50px 0 0 0;
+}
+
+.offers h3 {
+    color: #F15A29;
 }
 
 .page-offers {
@@ -151,5 +167,110 @@ a.logo {
     padding: 10px;
     float: right;
     border-radius: 8px;
-    margin: -10px 0;
+    position: relative;
+    top: 15%;
+}
+
+.all .header {
+    margin: 50px 0 20px 0;
+    width: 100%;
+}
+
+.all .header h2 {
+    color: #F15A29;
+}
+
+.all form {
+    /* float: right; */ 
+}
+
+.hotels-info {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    background: #EFEFEF;
+    /* background: #111; */
+    border-radius: 10px;
+}
+
+.hotels-info img {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+    width: 200px;
+    height:100%;
+}
+
+.hotels-info .infos {
+    margin: 10px;
+    width: 100%;
+}
+
+.hotels-info .infos h1 {
+    color: #F15A29;
+}
+
+.hotels-info .infos a{
+    background: #005D9C;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    float: right;
+}
+
+footer {
+    margin: 50px 0 0 0;
+    background: #d1d1d1;
+    text-align: center;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Login-cadastro page */
+
+.form-container {
+    display: flex;
+}
+
+.login-container, .cad-container {
+    width: 50%;
+}
+
+.login-container h1, .cad-container h1 {
+    margin: 20px 0;
+}
+
+.login-container input, .cad-container input {
+    width: 98%;
+    height: 30px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.login-container input[type=submit], .cad-container input[type=submit] {
+    width: 200px;
+    text-align: center;
+    padding: 0;
+    background: #6BAA3D;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.login-container input:focus, .cad-container input:focus {
+    outline: none;
+}
+
+.cad-container p {
+    font-size: 13px;
+    color: #e33337;
+}
+
+.login-container a {
+    float: right;
+    margin: 10px 14px;
+    color: #005D9C;
+    text-decoration: underline;
 }

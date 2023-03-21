@@ -9,6 +9,7 @@
                 <h3>Nome local</h3>
                 <h4>&starf; &starf; &starf; &starf; &star;</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, adipisci?</p>
+                <a href="">Ver Mais</a>
             </div>
         </div>
         <?php } ?>
@@ -33,7 +34,33 @@
         <?php } ?>
         </div>
     </div>
-    <div class="citys">
-        <h2>Hoteis nas capitais</h2>
+    <div class="all">
+        <div class="header">
+            <h2>Mais Relevantes</h2>
+            <form action="" method="post">
+                <select name="" id="">
+                    <option value="">Mais Relevantes</option>
+                    <option value="">Mais Bem Avaliados</option>
+                    <option value="">Maior Preço</option>
+                    <option value="">Menor Preço</option>
+                </select>
+            </form>
+        </div>
+        <?php
+            for($i = 0;$i < 4;$i++) {
+        ?>
+        <div class="hotels-info">
+            <div class="img">
+                <img src="./libs/images/imagem-hotel1.jpeg" alt="">
+            </div>
+            <div class="infos">
+                <h1>Nome do Hotel</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At assumenda recusandae vitae velit, enim harum?</p>
+                <p>&starf; &starf; &starf; &starf; &starf;</p>
+                <p>R$33 - R$123</p>
+                <a href="">Ver Mais</a>
+            </div>
+        </div>
+        <?php } ?>
     </div>
 </div>

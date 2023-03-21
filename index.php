@@ -7,6 +7,8 @@
         $url = "home";
     }
 
+    MySql::createTable("tb_usuários",["id" => "int", "nome" => "varchar(255)"]);
+
     View::render("header");
     View::render($url);
     View::render("footer");

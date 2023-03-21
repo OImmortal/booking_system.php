@@ -13,8 +13,8 @@
         <a href="Home" class="logo">Booking System</a>
         <div class="right">
             <ul>
-                <li><a href="page-login">Cadastre-se</a></li>
-                <li><a href="page-login">Logar-se</a></li>
+                <li><a href="Page-login">Cadastre-se</a></li>
+                <li><a href="Page-login">Logar-se</a></li>
             </ul>
         </div>
         <h2>Encontre sua proxima estadia</h2>
