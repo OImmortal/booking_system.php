@@ -1,13 +1,11 @@
 <?php
-    require("./Classes/MySQl.php");
+    include("./Classes/MySQl.php");
     require("./View/View.php");
-
+    require("./Classes/Class.php");
     @$url = $_GET['url'];
     if($url == '') {
         $url = "home";
     }
-
-    MySql::createTable("tb_usuários",["id" => "int", "nome" => "varchar(255)"]);
 
     View::render("header");
     View::render($url);

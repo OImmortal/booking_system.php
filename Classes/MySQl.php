@@ -1,7 +1,7 @@
 <?php
 
     class MySql {
-        private $conn;
+        private static $conn;
 
         public static function Connect() {
             $file_json = file_get_contents("info.json");
@@ -13,20 +13,14 @@
                     self::$conn = new PDO('mysql:host=localhost;dbname='.$content_json->database, $content_json->user, $content_json->password);
                     self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 } catch (Exception $e) {
-                    echo "ERROR ".$e->getMessage();
+                    echo "ERROR AO CONECTAR AO BANCO DE DADOS";
                 }
             }
-
+            
             return self::$conn;
         }
-
-        public static function createTable($nameTable,$info = []) {
-            echo $nameTable;
-            $chaveArray = array_keys($info);
-            $valoresArray = array_values($info);
-        }
-
-
+        
     }
+
 
 ?>
