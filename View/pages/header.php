@@ -12,10 +12,20 @@
     <header class="padding-150">
         <a href="Home" class="logo">Booking System</a>
         <div class="right">
+            <?php 
+                if(!isset($_SESSION['online']) || $_SESSION['online'] == false) {
+            ?>
             <ul>
+                <li><a href="">Anuncie</a></li>
                 <li><a href="Page-login">Cadastre-se</a></li>
                 <li><a href="Page-login">Logar-se</a></li>
             </ul>
+            <?php } else {?>
+                <div class="perfil">
+                    <h4><a href="Perfil">Nome do Usuário</a></h4>
+                    <a href="&loggout=1">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            <?php } ?>
         </div>
         <h2>Encontre sua proxima estadia</h2>
         <h4>Os melhores hotéis de todo o Brasil</h4>
