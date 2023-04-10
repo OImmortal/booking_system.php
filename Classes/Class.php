@@ -34,7 +34,7 @@ class Painel {
     }
 
     private function ExistUser($email,$cpf) {
-        $sql = MySql::Connect()->prepare("SELECT * FROM tb_usuarios WHERE email = ? AND CPF = ?");
+        $sql = MySql::Connect()->prepare("SELECT * FROM tb_usuarios WHERE email = ? OR CPF = ?");
         $sql->execute(array($email,$cpf));
 
         if($sql->rowCount() == 1) {
@@ -51,8 +51,22 @@ class Painel {
         }
     }
 
-    public static function Alert() {
-        echo "alerta";
+    public static function getDados($returnVar,$tabela,$coluna = []) {
+
+        if(count($coluna) == 0) {
+            $sql = MySql::Connect()->prepare("SELECT * FROM $tabela");
+            $sql->execute();
+        } else if(count($coluna) == 2) {
+            $sql = MySql::Connect()->prepare("SELECT * FROM $tabela WHERE $coluna[0] = ?");
+            $sql->execute(array($coluna[1]));
+        } else {
+            echo 'erro';
+            return;
+        }
+
+        $return = $sql->fetch();
+
+        return $return[$returnVar];
     }
 }
 

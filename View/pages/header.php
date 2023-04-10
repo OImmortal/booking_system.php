@@ -16,13 +16,28 @@
                 if(!isset($_SESSION['online']) || $_SESSION['online'] == false) {
             ?>
             <ul>
-                <li><a href="">Anuncie</a></li>
                 <li><a href="Page-login">Cadastre-se</a></li>
                 <li><a href="Page-login">Logar-se</a></li>
             </ul>
-            <?php } else {?>
+            <?php 
+            
+                } else {
+                    
+                $nomeUser = ucfirst(strtolower(Painel::getDados('nome','tb_usuarios',["id", $_SESSION['id']])));
+                $explodeName = explode(" ",$nomeUser);
+
+            ?>
                 <div class="perfil">
-                    <h4><a href="Perfil">Nome do Usuário</a></h4>
+                    <h4><a href="Perfil">
+                    <?php 
+                        for($i = 0;$i < count($explodeName);$i++) {
+                            echo ucfirst($explodeName[$i]." ");
+                            if($i == round(count($explodeName) / 2) - 1) {
+                                echo ucfirst(substr($explodeName[round(count($explodeName) / 2)], 0 ,1)).". ";
+                                $i = round(count($explodeName) / 2);
+                            }
+                        } 
+                    ?></a></h4>
                     <a href="&loggout=1">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
                 </div>
             <?php } ?>

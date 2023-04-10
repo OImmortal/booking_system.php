@@ -38,6 +38,7 @@
         $email = $_POST['email-login'];
         $senha = $_POST['senha-login'];
         $painel->newLogin($email,$senha);
+        $_SESSION['id'] = Painel::getDados("id","tb_usuarios",["email", $email]);
     }
     
 
